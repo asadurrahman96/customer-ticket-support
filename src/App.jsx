@@ -1,17 +1,10 @@
-
-import './App.css'
+import "./App.css";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
- 
-
   return (
-    <>
-    
-      <h1>Assignment-2</h1>
-     
-     
-    </>
-  )
+    <Navbar></Navbar>
+  );
 }
 
-export default App
+export default App;
