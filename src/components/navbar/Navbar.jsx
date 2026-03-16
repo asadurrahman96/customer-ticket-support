@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-white border-b border-gray-200 px-6 md:px-10">
+        <div className="navbar bg-white border-b border-gray-200 px-6 md:px-10 container mx-auto">
       <div className="flex-1">
         <a href="/" className="text-2xl font-bold text-black">
           Customer Support ticketing
