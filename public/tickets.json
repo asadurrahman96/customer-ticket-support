@@ -1,0 +1,110 @@
+[
+  {
+    "id": "TKT-20260316-001",
+    "title": "Login button not responding on mobile app",
+    "description": "After entering email and password, the login button just spins forever. Tried on two different Android phones. iOS version works fine. Cleared cache and reinstalled – same issue.",
+    "customer": "Rahim Khan",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-16T02:45:00Z"
+  },
+  {
+    "id": "TKT-20260316-002",
+    "title": "Payment received but subscription not activated",
+    "description": "Made payment of ৳2,499 via bKash on March 15 but account is still showing as free plan. Transaction ID: BK20260315X7842. Need urgent activation as we have client demo tomorrow.",
+    "customer": "Nusrat Jahan",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-03-16T03:12:00Z"
+  },
+  {
+    "id": "TKT-20260315-178",
+    "title": "Cannot export report as PDF – blank page",
+    "description": "When I click Export → PDF, it downloads but the file is completely blank (0 KB useful content). Excel export works. Using Chrome latest version.",
+    "customer": "Sadia Akter",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-15T14:30:00Z"
+  },
+  {
+    "id": "TKT-20260314-093",
+    "title": "Feature request: Bulk delete old notifications",
+    "description": "There are now >300 unread notifications and no way to clear them all at once. Would be very helpful to have 'select all' + delete or 'clear all before date' option.",
+    "customer": "Arif Hossain",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-03-14T09:20:00Z"
+  },
+  {
+    "id": "TKT-20260316-003",
+    "title": "Dashboard charts not loading – endless spinner",
+    "description": "All analytics widgets show loading spinner forever since yesterday evening. Other pages (settings, tickets, users) load normally. Tried incognito mode and different network.",
+    "customer": "Mehedi Hasan",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-03-16T04:08:00Z"
+  },
+  {
+    "id": "TKT-20260313-421",
+    "title": "Wrong amount shown after currency change",
+    "description": "Changed billing currency from USD to BDT but prices are still showing in dollars (with wrong conversion rate). Invoice PDF also shows USD.",
+    "customer": "Fatema Begum",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-13T11:55:00Z"
+  },
+  {
+    "id": "TKT-20260316-004",
+    "title": "Team member invited but never received email",
+    "description": "Invited colleague (milon@company.com) two days ago as admin. He never got the invitation email (checked spam too). Resent twice – same result.",
+    "customer": "Shakib Ahmed",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-16T05:40:00Z"
+  },
+  {
+    "id": "TKT-20260312-309",
+    "title": "App very slow when uploading large images",
+    "description": "Uploading product images > 3MB takes 40–60 seconds and sometimes fails. Internet speed is 45 Mbps down / 18 Mbps up. Smaller files upload instantly.",
+    "customer": "Tanzila Islam",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2026-03-12T16:25:00Z"
+  },
+  {
+    "id": "TKT-20260316-005",
+    "title": "API returning 500 error on /v2/reports endpoint",
+    "description": "Since ~4 hours ago, POST /v2/reports gives Internal Server Error 500. GET requests to same endpoint work. No changes in our code. Request ID in logs: req_8f3k9p2m",
+    "customer": "TechBit Solutions",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-16T06:15:00Z"
+  },
+  {
+    "id": "TKT-20260315-202",
+    "title": "Dark mode toggle not saving preference",
+    "description": "When I switch to dark mode and refresh or log out/in, it always reverts to light mode. Preference is saved correctly in localStorage though.",
+    "customer": "Riyad Mahmud",
+    "priority": "Low",
+    "status": "In Progress",
+    "createdAt": "2026-03-15T19:40:00Z"
+  },
+  {
+    "id": "TKT-20260316-006",
+    "title": "Cannot add new custom field to ticket form",
+    "description": "Trying to create new custom field (type: dropdown) but after filling all details and clicking Save, nothing happens – no error message either.",
+    "customer": "GreenTech BD",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-16T07:05:00Z"
+  },
+  {
+    "id": "TKT-20260311-087",
+    "title": "Request permanent account deletion",
+    "description": "No longer need the account under test.user.2024@gmail.com. Please permanently delete all personal data in accordance with DPA & GDPR.",
+    "customer": "Zubair Rahman",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-03-11T10:10:00Z"
+  }
+]
