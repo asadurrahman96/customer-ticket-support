@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Tickets from "./components/Tickets";
 import Footer from "./components/Footer";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const fetchTickets = async () => {
   const res = await fetch("/tickets.json");
@@ -17,11 +19,11 @@ function App() {
   const handleCardClick = (ticket) => {
     const alreadyAdded = taskList.find((t) => t.id == ticket.id);
     if (alreadyAdded) {
-      alert(`"${ticket.title}" is already in Task Status.`);
+      toast.warn(`"${ticket.title}" is already in Task Status.`);
       return;
     }
     setTaskList([...taskList, { id: ticket.id, title: ticket.title, completed: false }]);
-    alert(`✅ "${ticket.title}" added to Task Status!`);
+    toast.success(`"${ticket.title}" added to Task Status!`);
   };
 
   const handleComplete = (taskId) => {
@@ -29,13 +31,14 @@ function App() {
     setTaskList(
       taskList.map((t) => (t.id == taskId ? { ...t, completed: true } : t))
     );
-    alert(`🎉 "${task.title}" has been marked as Complete!`);
+    toast.success(`"${task.title}" has been marked as Complete!`);
   };
 
   const inProgressCount = taskList.filter((t) => !t.completed).length;
 
   return (
     <div>
+      <ToastContainer position="top-right" autoClose={3000} />
       <div className="bg-[#FFFFFF]">
         <Navbar />
 
@@ -55,4 +58,3 @@ function App() {
 }
 
 export default App;
-
