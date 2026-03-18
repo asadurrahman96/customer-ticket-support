@@ -1,11 +1,15 @@
 import React from 'react';
 
+import Container from './Container';
+
 const Navbar = () => {
     return (
-    <div className="navbar bg-white border-b border-gray-200 px-6 md:px-10">
+   <div className="sticky top-0 z-50 bg-white">
+     <Container>
+      <div className="navbar border-b border-gray-200 px-6 md:px-10">
   
       <div className="flex-1">
-        <a href="/" className="text-2xl font-bold text-black">
+        <a href="/" className="text-2xl font-bold">
           YourProduct
         </a>
       </div>
@@ -14,37 +18,37 @@ const Navbar = () => {
       <div className="flex-none hidden lg:flex items-center gap-1">
         <a 
           href="#home" 
-          className="btn btn-ghost text-black hover:text-gray-700 text-base font-medium"
+          className="btn btn-ghost  hover:text-gray-700 text-base font-medium"
         >
           Home
         </a>
         <a 
           href="#faq" 
-          className="btn btn-ghost text-black hover:text-gray-700 text-base font-medium"
+          className="btn btn-ghost  hover:text-gray-700 text-base font-medium"
         >
           FAQ
         </a>
         <a 
           href="#changelog" 
-          className="btn btn-ghost text-black hover:text-gray-700 text-base font-medium"
+          className="btn btn-ghost  hover:text-gray-700 text-base font-medium"
         >
           Changelog
         </a>
         <a 
           href="#blog" 
-          className="btn btn-ghost text-black hover:text-gray-700 text-base font-medium"
+          className="btn btn-ghost  hover:text-gray-700 text-base font-medium"
         >
           Blog
         </a>
         <a 
           href="#download" 
-          className="btn btn-ghost text-black hover:text-gray-700 text-base font-medium"
+          className="btn btn-ghost  hover:text-gray-700 text-base font-medium"
         >
           Download
         </a>
         <a 
           href="#contact" 
-          className="btn btn-ghost text-black hover:text-gray-700 text-base font-medium mr-3"
+          className="btn btn-ghost  hover:text-gray-700 text-base font-medium mr-3"
         >
           Contact
         </a>
@@ -73,6 +77,9 @@ const Navbar = () => {
         </button>
       </div>
     </div>
+
+    </Container>
+   </div>
   );
 };
 

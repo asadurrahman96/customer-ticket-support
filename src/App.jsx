@@ -1,21 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Tickets from "./components/Tickets";
+import Footer from "./components/Footer";
+
+const fetchTickets = async () => {
+  const res = await fetch("/tickets.json");
+  return res.json();
+};
+
+const fetchPromise = fetchTickets();
 
 function App() {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [taskList, setTaskList] = useState([]);
-
-  useEffect(() => {
-    fetch("/tickets.json")
-      .then((res) => res.json())
-      .then((result) => {
-        setData(result);
-        setLoading(false);
-      });
-  }, []);
 
   const handleCardClick = (ticket) => {
     const alreadyAdded = taskList.find((t) => t.id == ticket.id);
@@ -39,17 +36,23 @@ function App() {
 
   return (
     <div>
-      <Navbar />
-      <Banner data={data} inProgressCount={inProgressCount} />
-      <Tickets
-        data={data}
-        loading={loading}
-        taskList={taskList}
-        handleCardClick={handleCardClick}
-        handleComplete={handleComplete}
-      />
+      <div className="bg-[#FFFFFF]">
+        <Navbar />
+
+        <Suspense fallback={<div className="flex items-center justify-center h-screen"><div className="w-16 h-16 border-4 border-t-4 border-gray-300 border-t-purple-500 rounded-full animate-spin"></div></div>}>
+          <Banner fetchPromise={fetchPromise} inProgressCount={inProgressCount} />
+          <Tickets
+            fetchPromise={fetchPromise}
+            taskList={taskList}
+            handleCardClick={handleCardClick}
+            handleComplete={handleComplete}
+          />
+        </Suspense>
+      </div>
+      <Footer />
     </div>
   );
 }
 
 export default App;
+

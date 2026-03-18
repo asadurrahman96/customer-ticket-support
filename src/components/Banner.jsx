@@ -1,13 +1,20 @@
+import { use } from "react";
 import vectorLeft from '../assets/vector1.png';
 import vectorRight from '../assets/vector2.png';
+import Container from './Container';
 
-const Banner = ({ data, inProgressCount }) => {
+const Banner = ({ fetchPromise, inProgressCount }) => {
+  const data = use(fetchPromise);
   const resolvedCount = data.filter((t) => t.status == "Resolved").length;
 
   return (
     <div className="bg-base-200 py-12 px-6 md:px-10">
-      <div className="max-w-6xl container mx-auto">
+     <Container>
+
+     <div className="max-w-6xl">
         <div className="flex flex-col md:flex-row gap-6 lg:gap-8 justify-center">
+
+      
           <div className="card relative flex-1 min-h-[320px] md:min-h-[380px] rounded-2xl shadow-2xl overflow-hidden bg-gradient-to-br from-purple-700 via-purple-600 to-indigo-700">
             <img src={vectorLeft} alt="" className="absolute left-0 top-0 w-3/4 h-full object-cover opacity-30 pointer-events-none" />
             <img src={vectorRight} alt="" className="absolute right-0 top-0 w-3/4 h-full object-cover opacity-30 pointer-events-none" />
@@ -22,6 +29,7 @@ const Banner = ({ data, inProgressCount }) => {
             </div>
           </div>
 
+          
           <div className="card relative flex-1 min-h-[320px] md:min-h-[380px] rounded-2xl shadow-2xl overflow-hidden bg-gradient-to-br from-green-700 via-emerald-600 to-teal-700">
             <img src={vectorLeft} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25 pointer-events-none mix-blend-screen" style={{ clipPath: 'polygon(0 0, 60% 0, 60% 100%, 0 100%)' }} />
             <img src={vectorRight} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25 pointer-events-none mix-blend-screen" style={{ clipPath: 'polygon(40% 0, 100% 0, 100% 100%, 40% 100%)' }} />
@@ -38,6 +46,8 @@ const Banner = ({ data, inProgressCount }) => {
 
         </div>
       </div>
+
+     </Container>
     </div>
   );
 };
